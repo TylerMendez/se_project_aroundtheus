@@ -1,5 +1,3 @@
-import Popup from './Popup.js';
-
 export default class Section {
   constructor({ items, renderer }, containerSelector) {
     this._items = items;
@@ -8,7 +6,7 @@ export default class Section {
   }
 
   renderItems() {
-    this._items.forEach(item => {
+    this._items.forEach((item) => {
       this._renderer(item);
     });
   }

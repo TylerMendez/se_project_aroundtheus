@@ -9,18 +9,19 @@ export default class PopupWithForm extends Popup {
   }
 
   setEventListeners() {
-    super.setEventListeners();  // Calls the parent Popup setEventListeners method for closing behavior
+    super.setEventListeners();
     this._form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const formData = this._getInputValues(); // Gather form input data
-      this._handleFormSubmit(formData); // Pass data to the callback function
-      this.close(); // Close the modal after submit
+      const formData = this._getInputValues();
+      this._handleFormSubmit(formData);
+      this.close();
+      this._form.reset();
     });
   }
 
   _getInputValues() {
     const inputValues = {};
-    this._inputList.forEach(input => {
+    this._inputList.forEach((input) => {
       inputValues[input.name] = input.value;
     });
     return inputValues;
