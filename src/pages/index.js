@@ -8,15 +8,16 @@ import PopupWithImage from "../components/PopupWithImage.js";
 import "../pages/index.css";
 import { initialCards, formSettings } from "../utils/constants.js";
 
-// Select DOM elements
-const profileForm = document.querySelector('#profile-edit-form');
-const addPlaceForm = document.querySelector('#add-new-place-form');
-const profileEditButton = document.querySelector('#profile-edit-button');
-const addButton = document.querySelector('.profile__add-button');
-const profileTitleInput = document.querySelector('#profile-title-input');
-const profileDescriptionInput = document.querySelector('#profile-description-input');
+const profileForm = document.querySelector("#profile-edit-form");
+const addPlaceForm = document.querySelector("#add-new-place-form");
+const profileEditButton = document.querySelector("#profile-edit-button");
+const addButton = document.querySelector(".profile__add-button");
+const profileTitleInput = document.querySelector("#profile-title-input");
+const profileDescriptionInput = document.querySelector(
+  "#profile-description-input"
+);
 
-const cardSelector = '#card-template';
+const cardSelector = "#card-template";
 
 const userInfo = new UserInfo({
   nameSelector: ".profile__title",
@@ -69,7 +70,7 @@ const profileFormValidator = new FormValidator(formSettings, profileForm);
 profileFormValidator.enableValidation();
 
 const addPlaceFormValidator = new FormValidator(formSettings, addPlaceForm);
-addPlaceFormValidator.enableValidation();
+addPlaceFormValidator.disableButton();
 
 profileEditButton.addEventListener("click", () => {
   const currentUser = userInfo.getUserInfo();
