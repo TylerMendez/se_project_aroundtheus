@@ -70,7 +70,7 @@ const profileFormValidator = new FormValidator(formSettings, profileForm);
 profileFormValidator.enableValidation();
 
 const addPlaceFormValidator = new FormValidator(formSettings, addPlaceForm);
-addPlaceFormValidator.disableButton();
+addPlaceFormValidator.enableValidation();
 
 profileEditButton.addEventListener("click", () => {
   const currentUser = userInfo.getUserInfo();
@@ -81,6 +81,5 @@ profileEditButton.addEventListener("click", () => {
 });
 
 addButton.addEventListener("click", () => {
-  addPlaceFormValidator.resetValidation();
   addCardPopup.open();
 });
