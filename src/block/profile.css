@@ -69,16 +69,19 @@
   position: relative;
 }
 .profile__avatar-edit-button {
-  width: 50px;
+  opacity: 0;
   height: 50px;
-  opacity: 1;
+  width: 50px;
+  border: 50px solid transparent;
   position: absolute;
   top: 50%;
-  left: 43%;
+  left: 45%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  background: url(../images/avatareditbtn.svg) center no-repeat;
-  cursor: pointer;
+  background: transparent url(../images/avatareditbtn.svg) center no-repeat;
+}
+.profile__avatar-container:hover .profile__avatar-edit-button {
+  opacity: 1;
 }
 
 @media screen and (max-width: 697px) {
