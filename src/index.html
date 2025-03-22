@@ -17,21 +17,33 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/jacques-cousteau.jpg')%>"
-            alt="Portrait of Jacques Cousteau"
-            class="profile__image"
-          />
+          <div class="profile__avatar-container">
+            <img
+              src="<%=require('./images/jacques-cousteau.jpg')%>"
+              alt="Profile picture of Jacques Cousteau"
+              class="profile__image"
+            />
+            <button
+              class="profile__avatar-edit-button"
+              id="avatar-edit-button"
+              aria-label="Edit profile picture"
+            ></button>
+          </div>
           <div class="profile__info">
             <h1 class="profile__title">Jacques Cousteau</h1>
             <button
               class="profile__edit-button"
               id="profile-edit-button"
               type="button"
+              aria-label="Edit profile"
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button
+            class="profile__add-button"
+            type="button"
+            aria-label="Add new place"
+          ></button>
         </section>
       </main>
       <section class="cards page__section">
@@ -136,6 +148,50 @@
         ></button>
         <img src="" alt="" class="modal__image" />
         <p class="modal__caption"></p>
+      </div>
+    </div>
+
+    <!-- Delete Card Confirmation Modal -->
+    <div class="modal" id="delete-card-modal">
+      <div class="modal__container">
+        <button
+          id="delete-modal-close-button"
+          class="modal__close-button"
+        ></button>
+        <p class="modal__title">Are you sure?</p>
+        <form class="modal__form" id="delete-card-form">
+          <button class="modal__button-save" type="submit">Yes</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- .. -->
+
+    <!-- Update Avatar Modal -->
+    <div class="modal" id="avatar-modal">
+      <div class="modal__container">
+        <button
+          id="avatar-modal-close-button"
+          class="modal__close-button"
+        ></button>
+        <p class="modal__title">Update Profile Picture</p>
+        <form class="modal__form" id="avatar-form">
+          <input
+            type="url"
+            name="avatar"
+            class="modal__input"
+            placeholder="Avatar link"
+            id="avatar-input"
+            required
+          />
+          <span id="avatar-input-error" class="modal__error"></span>
+          <button
+            class="modal__button-save modal__button-save_disabled"
+            type="submit"
+          >
+            Save
+          </button>
+        </form>
       </div>
     </div>
 
