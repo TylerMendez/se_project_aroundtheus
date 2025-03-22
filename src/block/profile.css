@@ -70,13 +70,15 @@
 }
 .profile__avatar-edit-button {
   opacity: 0;
+  height: 50px;
+  width: 50px;
+  border: 50px solid transparent;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease;
-  background: transparent url(../images/avatareditbtn.svg) center
-    no-repeat;
+  background: transparent url(../images/avatareditbtn.svg) center no-repeat;
 }
 .profile__avatar-container:hover .profile__avatar-edit-button {
   opacity: 1;
