@@ -22,9 +22,4 @@ export default class PopupWithConfirmation extends Popup {
       }
     });
   }
-  
-  close() {
-    super.close();
-    this._form.reset();
-  }
 }

@@ -6,7 +6,9 @@ export default class PopupWithForm extends Popup {
     this._handleFormSubmit = handleFormSubmit;
     this._form = this._popup.querySelector("form");
     if (!this._form) {
-      throw new Error(`Form element not found in popup with selector ${popupSelector}`);
+      throw new Error(
+        `Form element not found in popup with selector ${popupSelector}`
+      );
     }
     this._inputList = Array.from(this._form.querySelectorAll("input"));
     this._submitButton = this._form.querySelector("button[type='submit']");

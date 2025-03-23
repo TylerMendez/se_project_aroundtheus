@@ -17,15 +17,15 @@ const api = new Api({
   },
 });
 
-api
- // .getInitialCards()
-  //.then((cards) => {
-    //cards.forEach((cardData) => {
-      //const card = new Card(cardData, "#card-template");
-      //const cardElement = card.generateCard();
-      //cardContainer.prepend(cardElement);
-    //});
-  //})
+api;
+// .getInitialCards()
+//.then((cards) => {
+//cards.forEach((cardData) => {
+//const card = new Card(cardData, "#card-template");
+//const cardElement = card.generateCard();
+//cardContainer.prepend(cardElement);
+//});
+//})
 
 let cardSection;
 Promise.all([api.getUserInfo(), api.getInitialCards()])
